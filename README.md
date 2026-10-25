@@ -3,15 +3,15 @@
 Case Studies **3** and **6**: Jupyter notebooks with executed code, outputs and explanations; equivalent Python scripts;
 a combined PDF report; and a Streamlit app for Case Study 3.
 
-**Report:** [`report/FDS_Case_Studies_Report_Rohan_Vellanki.pdf`](report/FDS_Case_Studies_Report_Rohan_Vellanki.pdf)
+**Report:** [`report/FDS_Case_Studies_Report_Rohan_Vellanki.pdf`](FDS-Case-Studies/report/FDS_Case_Studies_Report_Rohan_Vellanki.pdf)
 
 | | Case Study 3 | Case Study 6 |
 |---|---|---|
 | **Topic** | Titanic survival — Logistic Regression | Bank Marketing — comparison of 4 classifiers |
 | **Dataset** | `titanic.csv` (891 passengers) | UCI `bank-additional-full.csv` (41,188 calls) |
-| **Notebook** | [`Titanic_Logistic_Regression.ipynb`](case-study-3-titanic-logistic-regression/Titanic_Logistic_Regression.ipynb) | [`Bank_Marketing_Classification.ipynb`](case-study-6-bank-marketing-classification/Bank_Marketing_Classification.ipynb) |
-| **Python code** | [`titanic_logistic_regression.py`](case-study-3-titanic-logistic-regression/titanic_logistic_regression.py) | [`bank_marketing_classification.py`](case-study-6-bank-marketing-classification/bank_marketing_classification.py) |
-| **Extra** | Streamlit app [`app.py`](case-study-3-titanic-logistic-regression/app.py) | — |
+| **Notebook** | [`Titanic_Logistic_Regression.ipynb`](FDS-Case-Studies/case-study-3-titanic-logistic-regression/Titanic_Logistic_Regression.ipynb) | [`Bank_Marketing_Classification.ipynb`](FDS-Case-Studies/case-study-6-bank-marketing-classification/Bank_Marketing_Classification.ipynb) |
+| **Python code** | [`titanic_logistic_regression.py`](FDS-Case-Studies/case-study-3-titanic-logistic-regression/titanic_logistic_regression.py) | [`bank_marketing_classification.py`](FDS-Case-Studies/case-study-6-bank-marketing-classification/bank_marketing_classification.py) |
+| **Extra** | Streamlit app [`app.py`](FDS-Case-Studies/case-study-3-titanic-logistic-regression/app.py) | — |
 
 ## Key results
 
@@ -37,7 +37,7 @@ Recommended: Random Forest with a 0.21 threshold — finds 60% of subscribers fr
 pip install -r requirements.txt
 
 # Notebooks (run from inside each case-study folder; data paths are relative)
-cd case-study-3-titanic-logistic-regression
+cd FDS-Case-Studies/case-study-3-titanic-logistic-regression
 jupyter notebook Titanic_Logistic_Regression.ipynb
 
 # Streamlit app (Case Study 3) — the notebook saves the model it loads
@@ -45,27 +45,29 @@ streamlit run app.py
 ```
 
 To deploy the app online, create an app on [Streamlit Community Cloud](https://docs.streamlit.io/streamlit-community-cloud/deploy-your-app)
-from this repository with main file path `case-study-3-titanic-logistic-regression/app.py`.
+from this repository with main file path `FDS-Case-Studies/case-study-3-titanic-logistic-regression/app.py`.
 
 All results are reproducible: every split and model uses `random_state = 42`.
 
 ## Repository structure
 
 ```
-case-study-3-titanic-logistic-regression/
-    data/titanic.csv
-    Titanic_Logistic_Regression.ipynb
-    titanic_logistic_regression.py
-    app.py
-    model/titanic_logreg_pipeline.joblib
-    figures/            # every chart used in the report
-case-study-6-bank-marketing-classification/
-    data/bank-additional-full.csv
-    Bank_Marketing_Classification.ipynb
-    bank_marketing_classification.py
-    figures/
-report/FDS_Case_Studies_Report_Rohan_Vellanki.pdf
+README.md
 requirements.txt
+FDS-Case-Studies/
+    case-study-3-titanic-logistic-regression/
+        data/titanic.csv
+        Titanic_Logistic_Regression.ipynb
+        titanic_logistic_regression.py
+        app.py
+        model/titanic_logreg_pipeline.joblib
+        figures/            # every chart used in the report
+    case-study-6-bank-marketing-classification/
+        data/bank-additional-full.csv
+        Bank_Marketing_Classification.ipynb
+        bank_marketing_classification.py
+        figures/
+    report/FDS_Case_Studies_Report_Rohan_Vellanki.pdf
 ```
 
 ## Data sources
